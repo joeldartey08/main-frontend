@@ -157,6 +157,7 @@ export const studentsAPI = {
   bulkUpload: (file) => {
     const formData = new FormData();
     formData.append("file", file);
+    console.log(file)
     return api.post("/api/students/bulk-upload/", formData, {
       headers: { "Content-Type": "multipart/form-data" },
     });
